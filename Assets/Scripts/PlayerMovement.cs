@@ -16,6 +16,10 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+       // PlayerPrefs.SetString("Name","Anusha");
+       // Debug.Log(PlayerPrefs.GetString("Name"));
+       
+        
     }
 
     // Update is called once per frame
@@ -28,7 +32,9 @@ public class PlayerMovement : MonoBehaviour
         }
 
        score = Mathf.FloorToInt(transform.position.x);
-        //Debug.Log(score);
+       // PlayerPrefs.SetInt("score", 2);
+        //Debug.Log(PlayerPrefs.GetInt("score"));
+       
         scoreText.text = score.ToString();
         if (score == speedToIncrease)
         {
